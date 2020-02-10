@@ -7,6 +7,12 @@ you can install the dependencies by running this command
 ## Run Django
 >python manage.py runserver 0:8000
 
+## Make Migrations and Migrate
+To create DB and migrate the to DB :
+
+>python manage.py makemigrations
+>python manage.py migrate
+
 ## Generate Client_ID and client_secret
 before you register app to get client_id and client_secret, you have to log in as user, you can create user by following command
 >python manage.py createsuperuser
@@ -58,6 +64,35 @@ request body :
   * client_secret : <client_secret>
    
    
-  
+ ### CRUD
+ ## Create
+ USING POST :
+ >http://localhost:8000/api/books
  
-
+ header :
+ * Authorization : bearer <your token>
+ body :
+ * title : string
+ * author : string
+ * review : string
+ * rating : integer
+ 
+ ## Read
+ Using GET :
+ >http://localhost:8000/api/books
+  header :
+ * Authorization : bearer <your token>
+ 
+ ## Update
+ Using PUT :
+ >http://localhost:8000/api/books/<id>
+   header :
+ * Authorization : bearer <your token>
+ 
+  ## Delete
+ Using Delete :
+ >http://localhost:8000/api/books/<id>
+   header :
+ * Authorization : bearer <your token>
+ 
+ 
