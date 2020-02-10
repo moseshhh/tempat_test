@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'oauth2_provider',
     'rest_framework',
     'user',
-    'unicorn',
     'books'
 ]
 
@@ -120,10 +119,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-OAUTH2_PROVIDER = {                                                                                                                                                                      
-    'OAUTH2_BACKEND_CLASS': 'oauth2_provider.oauth2_backends.JSONOAuthLibCore',                                                                                                          
-}
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
